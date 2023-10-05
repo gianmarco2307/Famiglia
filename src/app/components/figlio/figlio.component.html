@@ -1,0 +1,11 @@
+<h3>Il component FIGLIO stampa i numeri pari:</h3>
+<div *ngIf="ricevutoDaChild == false">
+    <!--N.B. L'array che viene ricevuto dal component child conterrà solo numeri dispari-->
+    <div *ngFor="let strnum of arrayEreditato">
+        <p *ngIf="arrayEreditato.indexOf(strnum) % 2 != 0">{{strnum}}</p>
+        <!--Essendo l'arrayEreditato di tipo stringhe teniamo in considerazione gli indici degli elementi: ad indice dispari corrisponderà un numero pari-->
+    </div>
+</div>
+
+
+<app-padre (output)="riceviDaChild($event)"></app-padre>

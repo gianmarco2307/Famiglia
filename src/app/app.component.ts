@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Famiglia';
+
+  numeri: string[] = ["I","II","III","IV","V","VI","VII","VIII","IX","X"];
 }
