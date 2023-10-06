@@ -7,10 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class FIGLIOComponent {
   @Input() arrayEreditato!: string[];
-  ricevutoDaChild: boolean = false;
+  ricevutoDaChild!: string[];
+  ricevuto: boolean = false;
 
   riceviDaChild(event: any){
-    this.arrayEreditato = event;
-    this.ricevutoDaChild = true;
+    this.ricevutoDaChild = event;
+    this.ricevuto = true;
   }
 }
